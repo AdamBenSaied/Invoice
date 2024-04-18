@@ -21,7 +21,7 @@ public class UserVO {
     private String surname;
 
     @Column (name = "ADDRESS")
-    private String adress;
+    private String address;
 
     @Column (name = "TELEPHONE")
     private String telephone;
@@ -36,7 +36,7 @@ public class UserVO {
         this.mail = mail;
         this.name = name;
         this.surname = surname;
-        this.adress = adress;
+        this.address = adress;
         this.telephone = telephone;
         this.country = country;
     }

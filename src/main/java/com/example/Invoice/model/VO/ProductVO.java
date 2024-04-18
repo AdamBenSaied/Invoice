@@ -26,10 +26,10 @@ public class ProductVO {
     private Integer tax;
 
     @Column(name = "STATUS")
-    StatusProducts statusProducts;
+   private StatusProducts statusProducts;
 
     @Column(name = "STOCK")
-    Integer stock;
+   private Integer stock;
 
     public ProductVO() {
     }

@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "invoices")
-public class InvoiceVO  {
+public class InvoiceVO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,24 +18,27 @@ public class InvoiceVO  {
     @Column(name = "INVOICE_DATE")
     private LocalDate invoiceDate;
 
-    @Column(name ="TOTAL_AMOUNT_HT")
+    @Column(name = "TOTAL_AMOUNT_HT")
     private BigDecimal totalAmountHT;
 
     @Column(name = "TOTAL_AMOUNT_TTC")
     private BigDecimal getTotalAmountTTC;
 
     @Column(name = "PAYMENT_METHOD")
-    private PaymentMethod paymentMethod ;
+    private PaymentMethod paymentMethod;
 
     @Column(name = "STATUS")
     private StatusInvoice statusInvoice;
 
-    @ManyToOne
-    @JoinColumn(name = "ID_CASHIER",referencedColumnName = "ID")
-    private  CashierVO cashierVO;
+    @Column(name = "QRCODE")
+    private String qrCode;
 
     @ManyToOne
-    @JoinColumn(name = "ID_CLIENT",referencedColumnName = "ID")
+    @JoinColumn(name = "ID_CASHIER", referencedColumnName = "ID")
+    private CashierVO cashierVO;
+
+    @ManyToOne
+    @JoinColumn(name = "ID_CLIENT", referencedColumnName = "ID")
     private ClientVO clientVO;
 
     public InvoiceVO() {
@@ -52,7 +55,6 @@ public class InvoiceVO  {
         this.cashierVO = cashierVO;
         this.clientVO = clientVO;
     }
-
 
 
     public LocalDate getInvoiceDate() {
