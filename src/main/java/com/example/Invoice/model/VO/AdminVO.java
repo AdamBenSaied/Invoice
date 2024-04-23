@@ -16,7 +16,7 @@ public class AdminVO {
 
     @OneToOne
     @JoinColumn(name = "ID_USER",referencedColumnName = "ID")
-    private UserVO IdUser;
+    private UserVO userVO;
 
     @ManyToOne
     @JoinColumn(name = "ID_COMPANY", referencedColumnName = "ID")
@@ -31,16 +31,16 @@ public class AdminVO {
 
 
     public AdminVO(UserVO idUser, CompanyVO companyVO) {
-        IdUser = idUser;
+        userVO = idUser;
         this.companyVO = companyVO;
     }
 
-    public UserVO getIdUser() {
-        return IdUser;
+    public UserVO getUserVO() {
+        return userVO;
     }
 
-    public void setIdUser(UserVO idUser) {
-        IdUser = idUser;
+    public void setUserVO(UserVO userVO) {
+        this.userVO = userVO;
     }
 
     public CompanyVO getCompanyVO() {

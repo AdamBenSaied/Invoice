@@ -26,6 +26,7 @@ public class ProductVO {
     private Integer tax;
 
     @Column(name = "STATUS")
+    @Enumerated(EnumType.STRING)
    private StatusProducts statusProducts;
 
     @Column(name = "STOCK")

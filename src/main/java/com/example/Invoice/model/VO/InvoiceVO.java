@@ -25,9 +25,11 @@ public class InvoiceVO {
     private BigDecimal getTotalAmountTTC;
 
     @Column(name = "PAYMENT_METHOD")
+    @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
 
     @Column(name = "STATUS")
+    @Enumerated(EnumType.STRING)
     private StatusInvoice statusInvoice;
 
     @Column(name = "QRCODE")

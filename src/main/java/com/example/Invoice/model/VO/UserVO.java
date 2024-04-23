@@ -27,7 +27,7 @@ public class UserVO {
     private String telephone;
 
     @Column(name ="COUNTRY")
-    private String country;
+        private String country;
 
     public UserVO() {
 

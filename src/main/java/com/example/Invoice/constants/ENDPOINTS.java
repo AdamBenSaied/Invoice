@@ -10,4 +10,5 @@ public class ENDPOINTS {
     public static final String PRODUCT_ENDPOINT = "product";
     public static final String USER_ENDPOINT = "user";
 
+
 }

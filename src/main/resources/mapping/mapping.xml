@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+      http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <mapping>
+        <class-a>com.example.Invoice.model.VO.AdminVO</class-a>
+        <class-b>com.example.Invoice.model.WVO.AdminWVO</class-b>
+        <field>
+            <a>userVO</a>
+            <b>userWVO</b>
+        </field>
+        <field>
+            <a>companyVO</a>
+            <b>companyWVO</b>
+        </field>
+    </mapping>
+
+    <mapping>
+        <class-a>com.example.Invoice.model.VO.CashierVO</class-a>
+        <class-b>com.example.Invoice.model.WVO.CashierWVO</class-b>
+        <field>
+            <a>userVO</a>
+            <b>userWVO</b>
+        </field>
+        <field>
+            <a>companyVO</a>
+            <b>companyWVO</b>
+        </field>
+    </mapping>
+
+    <mapping>
+        <class-a>com.example.Invoice.model.VO.ClientVO</class-a>
+        <class-b>com class="example Invoice model WVO ClientWVO"></class-b>
+        <field>
+            <a>userVO</a>
+            <b>userWVO</b>
+        </field>
+    </mapping>
+
+
+    <mapping>
+        <class-a>com.example.Invoice.model.VO.CompanyVO</class-a>
+        <class-b>com.example.Invoice.model.WVO.CompanyWVO</class-b>
+    </mapping>
+
+    <mapping>
+        <class-a>com.example.Invoice.model.VO.InvoiceVO</class-a>
+        <class-b>com.example.Invoice.model.WVO.InvoiceWVO</class-b>
+
+        <field>
+            <a>cashierVO</a>
+            <b>cashierWVO</b>
+        </field>
+
+        <field>
+            <a>clientVO</a>
+            <b>clientWVO</b>
+        </field>
+    </mapping>
+
+    <mapping>
+        <class-a>com.example.Invoice.model.VO.ProductVO</class-a>
+        <class-b>com.example.Invoice.model.WVO.ProductWVO</class-b>
+    </mapping>
+
+    <mapping>
+        <class-a>com.example.Invoice.model.VO.UserVO</class-a>
+        <class-b>com.example.Invoice.model.WVO.UserWVO</class-b>
+    </mapping>
+
+</mappings>

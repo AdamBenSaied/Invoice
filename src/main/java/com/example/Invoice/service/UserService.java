@@ -1,16 +1,7 @@
 package com.example.Invoice.service;
 
-import com.example.Invoice.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.example.Invoice.model.WVO.UserWVO;
 
-@Service
-public class UserService {
+public interface UserService {
 
-    private UserRepository userRepository;
-
-    @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-}
+   }
