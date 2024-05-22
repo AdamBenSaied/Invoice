@@ -1,16 +1,22 @@
 package com.example.Invoice.model.VO;
 
 import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
 
 @Entity
 @Table(name = "admins")
-public class AdminVO {
+public class AdminVO implements UserDetails {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "MAIL")
+    private String mail;
     @Column(name = "PASSWORD")
     private String password;
 
@@ -30,9 +36,16 @@ public class AdminVO {
     }
 
 
-    public AdminVO(UserVO idUser, CompanyVO companyVO) {
-        userVO = idUser;
+    public AdminVO(UserVO userVO, CompanyVO companyVO) {
         this.companyVO = companyVO;
+        this.userVO = userVO;
+    }
+
+    public AdminVO(String mail, String password, UserVO userVO, CompanyVO companyVO) {
+        this.mail=mail;
+        this.password=password;
+        this.userVO=userVO;
+        this.companyVO=companyVO;
     }
 
     public UserVO getUserVO() {
@@ -52,6 +65,38 @@ public class AdminVO {
     }
 
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
 
+    @Override
+    public String getPassword() {
+        return password;
+    }
 
+    @Override
+    public String getUsername() {
+        return mail;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 }

@@ -2,7 +2,6 @@ package com.example.Invoice.model.VO;
 
 
 import jakarta.persistence.*;
-import jdk.jshell.Snippet;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -22,7 +21,7 @@ public class InvoiceVO {
     private BigDecimal totalAmountHT;
 
     @Column(name = "TOTAL_AMOUNT_TTC")
-    private BigDecimal getTotalAmountTTC;
+    private BigDecimal totalAmountTTC;
 
     @Column(name = "PAYMENT_METHOD")
     @Enumerated(EnumType.STRING)
@@ -47,11 +46,11 @@ public class InvoiceVO {
     }
 
     public InvoiceVO(LocalDate invoiceDate, BigDecimal totalAmountHT,
-                     BigDecimal getTotalAmountTTC, PaymentMethod paymentMethod,
+                     BigDecimal totalAmountTTC, PaymentMethod paymentMethod,
                      StatusInvoice statusInvoice, CashierVO cashierVO, ClientVO clientVO) {
         this.invoiceDate = invoiceDate;
         this.totalAmountHT = totalAmountHT;
-        this.getTotalAmountTTC = getTotalAmountTTC;
+        this.totalAmountTTC = totalAmountTTC;
         this.paymentMethod = paymentMethod;
         this.statusInvoice = statusInvoice;
         this.cashierVO = cashierVO;
@@ -75,12 +74,12 @@ public class InvoiceVO {
         this.totalAmountHT = totalAmountHT;
     }
 
-    public BigDecimal getGetTotalAmountTTC() {
-        return getTotalAmountTTC;
+    public BigDecimal getTotalAmountTTC() {
+        return totalAmountTTC;
     }
 
-    public void setGetTotalAmountTTC(BigDecimal getTotalAmountTTC) {
-        this.getTotalAmountTTC = getTotalAmountTTC;
+    public void setTotalAmountTTC(BigDecimal totalAmountTTC) {
+        this.totalAmountTTC = totalAmountTTC;
     }
 
     public PaymentMethod getPaymentMethod() {

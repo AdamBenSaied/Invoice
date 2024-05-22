@@ -32,7 +32,7 @@
 
     <mapping>
         <class-a>com.example.Invoice.model.VO.ClientVO</class-a>
-        <class-b>com class="example Invoice model WVO ClientWVO"></class-b>
+        <class-b>com.example.Invoice.model.WVO.ClientWVO</class-b>
         <field>
             <a>userVO</a>
             <b>userWVO</b>
@@ -50,14 +50,15 @@
         <class-b>com.example.Invoice.model.WVO.InvoiceWVO</class-b>
 
         <field>
+            <a>clientVO</a>
+            <b>clientWVO</b>
+        </field>
+
+        <field>
             <a>cashierVO</a>
             <b>cashierWVO</b>
         </field>
 
-        <field>
-            <a>clientVO</a>
-            <b>clientWVO</b>
-        </field>
     </mapping>
 
     <mapping>

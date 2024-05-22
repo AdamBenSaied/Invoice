@@ -1,19 +1,39 @@
 package com.example.Invoice.model.WVO;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.io.Serializable;
 
 public class CashierWVO implements Serializable {
 
-private UserWVO userWVO;
+    private String mail;
 
-private CompanyWVO companyWVO;
+    private UserWVO userWVO;
+
+    private CompanyWVO companyWVO;
+
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private String password;
 
     public CashierWVO() {
     }
 
-    public CashierWVO(UserWVO userWVO, CompanyWVO companyWVO) {
+    public CashierWVO(String mail, UserWVO userWVO, CompanyWVO companyWVO) {
+        this.mail = mail;
         this.userWVO = userWVO;
         this.companyWVO = companyWVO;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     public UserWVO getUserWVO() {

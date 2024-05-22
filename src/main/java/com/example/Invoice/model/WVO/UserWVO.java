@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class UserWVO implements Serializable {
 
-    private String mail;
 
     private String name;
 
@@ -19,15 +18,7 @@ public class UserWVO implements Serializable {
     public UserWVO() {
     }
 
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    public String getName() {
+      public String getName() {
         return name;
     }
 

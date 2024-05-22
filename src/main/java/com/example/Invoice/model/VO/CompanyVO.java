@@ -3,6 +3,7 @@ package com.example.Invoice.model.VO;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "companies")
 public class CompanyVO {
@@ -111,4 +112,5 @@ public class CompanyVO {
     public void setLogo(String logo) {
         this.logo = logo;
     }
+
 }

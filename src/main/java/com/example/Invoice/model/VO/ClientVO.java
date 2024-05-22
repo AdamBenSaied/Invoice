@@ -3,8 +3,6 @@ package com.example.Invoice.model.VO;
 
 import jakarta.persistence.*;
 
-import java.security.PrivateKey;
-
 @Entity
 @Table(name = "clients")
 public class ClientVO {

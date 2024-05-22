@@ -11,9 +11,6 @@ public class UserVO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "MAIL")
-    private String mail;
-
     @Column (name = "NAME")
     private String name;
 
@@ -32,8 +29,7 @@ public class UserVO {
     public UserVO() {
 
     }
-    public UserVO(String mail, String name, String surname, String adress, String telephone, String country) {
-        this.mail = mail;
+    public UserVO(String name, String surname, String adress, String telephone, String country) {
         this.name = name;
         this.surname = surname;
         this.address = adress;
@@ -41,6 +37,47 @@ public class UserVO {
         this.country = country;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 }

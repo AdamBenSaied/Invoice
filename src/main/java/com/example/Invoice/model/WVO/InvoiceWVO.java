@@ -1,7 +1,6 @@
 package com.example.Invoice.model.WVO;
 
-import com.example.Invoice.model.VO.CashierVO;
-import com.example.Invoice.model.VO.ClientVO;
+
 import com.example.Invoice.model.VO.PaymentMethod;
 import com.example.Invoice.model.VO.StatusInvoice;
 
@@ -15,7 +14,7 @@ public class InvoiceWVO implements Serializable {
 
     private BigDecimal totalAmountHT;
 
-    private BigDecimal getTotalAmountTTC;
+    private BigDecimal totalAmountTTC;
 
     private PaymentMethod paymentMethod;
 
@@ -23,9 +22,9 @@ public class InvoiceWVO implements Serializable {
 
     private String qrCode;
 
-    private CashierVO cashierVO;
+    private CashierWVO cashierWVO;
 
-    private ClientVO clientVO;
+    private ClientWVO clientWVO;
 
     public InvoiceWVO() {
     }
@@ -47,12 +46,12 @@ public class InvoiceWVO implements Serializable {
         this.totalAmountHT = totalAmountHT;
     }
 
-    public BigDecimal getGetTotalAmountTTC() {
-        return getTotalAmountTTC;
+    public BigDecimal getTotalAmountTTC() {
+        return totalAmountTTC;
     }
 
-    public void setGetTotalAmountTTC(BigDecimal getTotalAmountTTC) {
-        this.getTotalAmountTTC = getTotalAmountTTC;
+    public void setTotalAmountTTC(BigDecimal totalAmountTTC) {
+        this.totalAmountTTC = totalAmountTTC;
     }
 
     public PaymentMethod getPaymentMethod() {
@@ -79,19 +78,21 @@ public class InvoiceWVO implements Serializable {
         this.qrCode = qrCode;
     }
 
-    public CashierVO getCashierVO() {
-        return cashierVO;
+    public CashierWVO getCashierWVO() {
+        return cashierWVO;
     }
 
-    public void setCashierVO(CashierVO cashierVO) {
-        this.cashierVO = cashierVO;
+    public void setCashierWVO(CashierWVO cashierWVO) {
+        this.cashierWVO = cashierWVO;
     }
 
-    public ClientVO getClientVO() {
-        return clientVO;
+    public ClientWVO getClientWVO() {
+        return clientWVO;
     }
 
-    public void setClientVO(ClientVO clientVO) {
-        this.clientVO = clientVO;
+    public void setClientWVO(ClientWVO clientWVO) {
+        this.clientWVO = clientWVO;
     }
+
+
 }
